@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "7127F1A1C73CABA407E13167218D6385D8FECCC1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "7127F1A1C73CABA407E13167218D6385D8FECCC1" : 0,
+    "0666B8749607A9097FA47BC516240266C4E79D1D" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "47E8235D-7DF8-41AA-B596-D9AEDF564D65",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "7127F1A1C73CABA407E13167218D6385D8FECCC1" : "live\/",
+    "0666B8749607A9097FA47BC516240266C4E79D1D" : "live\/lib\/protobuf-swift\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "live",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "live.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:alexeyxo\/protobuf-swift.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0666B8749607A9097FA47BC516240266C4E79D1D"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:chenshaobo\/live-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7127F1A1C73CABA407E13167218D6385D8FECCC1"
+    }
+  ]
+}

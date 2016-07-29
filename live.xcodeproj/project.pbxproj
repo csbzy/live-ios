@@ -14,6 +14,11 @@
 		436E764D1D4AEECB007EE492 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 436E764B1D4AEECB007EE492 /* LaunchScreen.storyboard */; };
 		436E76551D4AF19B007EE492 /* Myproto.Myproto.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E76541D4AF19B007EE492 /* Myproto.Myproto.proto.swift */; };
 		436E766E1D4AF3F4007EE492 /* ProtocolBuffers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436E76611D4AF3B6007EE492 /* ProtocolBuffers.framework */; };
+		436E767D1D4B06BD007EE492 /* RoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E767C1D4B06BD007EE492 /* RoomCell.swift */; };
+		436E76921D4B09CA007EE492 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436E768A1D4B09B3007EE492 /* Starscream.framework */; };
+		436E76941D4B09E1007EE492 /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E76931D4B09E1007EE492 /* config.swift */; };
+		436E769A1D4B0A7E007EE492 /* Net.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E76991D4B0A7E007EE492 /* Net.swift */; };
+		FB69316ED2C661155226FB1C /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB894BFA32A815280C042D9 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +71,27 @@
 			remoteGlobalIDString = 3FA7DAD01BE68F600067108E;
 			remoteInfo = "UnitTesting(tvOS)";
 		};
+		436E76851D4B09B3007EE492 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 436E767F1D4B09B3007EE492 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6F6BCF089D797BE444DFCEDFCD5A1E9E;
+			remoteInfo = Pods;
+		};
+		436E76871D4B09B3007EE492 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 436E767F1D4B09B3007EE492 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 95C01318193B83110448FFC7BCE00D44;
+			remoteInfo = "ProtocolBuffers-Swift";
+		};
+		436E76891D4B09B3007EE492 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 436E767F1D4B09B3007EE492 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 39CCABBDDC466E8E93A348183342927C;
+			remoteInfo = Starscream;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +104,10 @@
 		436E764E1D4AEECB007EE492 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		436E76541D4AF19B007EE492 /* Myproto.Myproto.proto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Myproto.Myproto.proto.swift; sourceTree = SOURCE_ROOT; };
 		436E76561D4AF3B6007EE492 /* ProtocolBuffers.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ProtocolBuffers.xcodeproj; path = "lib/protobuf-swift/plugin/ProtocolBuffers/ProtocolBuffers.xcodeproj"; sourceTree = "<group>"; };
+		436E767C1D4B06BD007EE492 /* RoomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomCell.swift; sourceTree = "<group>"; };
+		436E767F1D4B09B3007EE492 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
+		436E76931D4B09E1007EE492 /* config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
+		436E76991D4B0A7E007EE492 /* Net.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Net.swift; sourceTree = "<group>"; };
 		9AB894BFA32A815280C042D9 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B311F97193FAF2633715CC4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E8883E00FF7C3D6FC60BC66A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -88,7 +118,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				436E76921D4B09CA007EE492 /* Starscream.framework in Frameworks */,
 				436E766E1D4AF3F4007EE492 /* ProtocolBuffers.framework in Frameworks */,
+				FB69316ED2C661155226FB1C /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +139,7 @@
 		436E76361D4AEECB007EE492 = {
 			isa = PBXGroup;
 			children = (
+				436E767F1D4B09B3007EE492 /* Pods.xcodeproj */,
 				436E76561D4AF3B6007EE492 /* ProtocolBuffers.xcodeproj */,
 				436E76411D4AEECB007EE492 /* live */,
 				436E76401D4AEECB007EE492 /* Products */,
@@ -126,6 +159,7 @@
 		436E76411D4AEECB007EE492 /* live */ = {
 			isa = PBXGroup;
 			children = (
+				436E767C1D4B06BD007EE492 /* RoomCell.swift */,
 				436E76421D4AEECB007EE492 /* AppDelegate.swift */,
 				436E76441D4AEECB007EE492 /* ViewController.swift */,
 				436E76461D4AEECB007EE492 /* Main.storyboard */,
@@ -133,6 +167,8 @@
 				436E76491D4AEECB007EE492 /* Assets.xcassets */,
 				436E764B1D4AEECB007EE492 /* LaunchScreen.storyboard */,
 				436E764E1D4AEECB007EE492 /* Info.plist */,
+				436E76931D4B09E1007EE492 /* config.swift */,
+				436E76991D4B0A7E007EE492 /* Net.swift */,
 			);
 			path = live;
 			sourceTree = "<group>";
@@ -147,6 +183,16 @@
 				436E76691D4AF3B6007EE492 /* ProtocolBuffersTests.xctest */,
 				436E766B1D4AF3B6007EE492 /* UnitTesting(OSX).xctest */,
 				436E766D1D4AF3B6007EE492 /* UnitTesting(tvOS).xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		436E76801D4B09B3007EE492 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				436E76861D4B09B3007EE492 /* Pods.framework */,
+				436E76881D4B09B3007EE492 /* ProtocolBuffers.framework */,
+				436E768A1D4B09B3007EE492 /* Starscream.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -210,6 +256,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = 436E76801D4B09B3007EE492 /* Products */;
+					ProjectRef = 436E767F1D4B09B3007EE492 /* Pods.xcodeproj */;
+				},
+				{
 					ProductGroup = 436E76571D4AF3B6007EE492 /* Products */;
 					ProjectRef = 436E76561D4AF3B6007EE492 /* ProtocolBuffers.xcodeproj */;
 				},
@@ -269,6 +319,27 @@
 			fileType = wrapper.cfbundle;
 			path = "UnitTesting(tvOS).xctest";
 			remoteRef = 436E766C1D4AF3B6007EE492 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		436E76861D4B09B3007EE492 /* Pods.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods.framework;
+			remoteRef = 436E76851D4B09B3007EE492 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		436E76881D4B09B3007EE492 /* ProtocolBuffers.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ProtocolBuffers.framework;
+			remoteRef = 436E76871D4B09B3007EE492 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		436E768A1D4B09B3007EE492 /* Starscream.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Starscream.framework;
+			remoteRef = 436E76891D4B09B3007EE492 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -340,7 +411,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				436E76451D4AEECB007EE492 /* ViewController.swift in Sources */,
+				436E769A1D4B0A7E007EE492 /* Net.swift in Sources */,
 				436E76431D4AEECB007EE492 /* AppDelegate.swift in Sources */,
+				436E767D1D4B06BD007EE492 /* RoomCell.swift in Sources */,
+				436E76941D4B09E1007EE492 /* config.swift in Sources */,
 				436E76551D4AF19B007EE492 /* Myproto.Myproto.proto.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

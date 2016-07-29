@@ -25,7 +25,6 @@ class Socket :NSObject,WebSocketDelegate{
     
     func websocketDidDisconnect(socket: WebSocket, error: NSError?) {
         print("websocket is disconnected: \(error?.localizedDescription)")
-        self.socket?.connect()
     }
     
     func websocketDidReceiveMessage(socket: WebSocket, text: String) {
@@ -38,8 +37,21 @@ class Socket :NSObject,WebSocketDelegate{
     func getRoom(){
         let getRoomsBuilder = Myproto.GetRoomsTos.Builder()
          do {
+            
+            getRoomsBuilder.setId(1000)
            let getRooms =  try getRoomsBuilder.build()
-            self.socket?.writeData(getRooms.data())
+            
+           var  protoData = getRooms.data()
+            
+            var data = NSMutableData()
+            var len :UInt64 =  CFSwapInt64HostToBig(UInt64(sizeof(Int64) * 2 + protoData.length )*2)
+            data.appendBytes(&len, length: sizeof(Int64))
+            var messageType = CFSwapInt64HostToBig(1008)
+            data.appendBytes(&messageType, length: sizeof(Int64))
+            
+            data.appendBytes(&protoData, length: protoData.length)
+            print("data\(getRooms.data())   ")
+            self.socket?.writeData(NSData(data: data))
 
          }catch _ {
             print("not build")

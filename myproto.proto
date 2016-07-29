@@ -34,6 +34,7 @@ message LiveToc{//<1007>
 }
 
 message GetRoomsTos{//<1008>
+       required int64 id = 1;
 }
 
 message room{

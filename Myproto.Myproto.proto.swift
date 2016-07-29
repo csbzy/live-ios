@@ -92,6 +92,7 @@ public func == (lhs: Myproto.GetRoomsTos, rhs: Myproto.GetRoomsTos) -> Bool {
     return true
   }
   var fieldCheck:Bool = (lhs.hashValue == rhs.hashValue)
+  fieldCheck = fieldCheck && (lhs.hasId == rhs.hasId) && (!lhs.hasId || lhs.id == rhs.id)
   fieldCheck = (fieldCheck && (lhs.unknownFields == rhs.unknownFields))
   return fieldCheck
 }
@@ -1753,13 +1754,22 @@ public extension Myproto {
 
   //<1008>
   final public class GetRoomsTos : GeneratedMessage, GeneratedMessageProtocol {
+    public private(set) var id:Int64 = Int64(0)
+
+    public private(set) var hasId:Bool = false
     required public init() {
          super.init()
     }
     override public func isInitialized() -> Bool {
+      if !hasId {
+        return false
+      }
      return true
     }
     override public func writeToCodedOutputStream(output:CodedOutputStream) throws {
+      if hasId {
+        try output.writeInt64(1, value:id)
+      }
       try unknownFields.writeToCodedOutputStream(output)
     }
     override public func serializedSize() -> Int32 {
@@ -1769,6 +1779,9 @@ public extension Myproto {
       }
 
       serialize_size = 0
+      if hasId {
+        serialize_size += id.computeInt64Size(1)
+      }
       serialize_size += unknownFields.serializedSize()
       memoizedSerializedSize = serialize_size
       return serialize_size
@@ -1821,12 +1834,18 @@ public extension Myproto {
     }
     override public func getDescription(indent:String) throws -> String {
       var output:String = ""
+      if hasId {
+        output += "\(indent) id: \(id) \n"
+      }
       output += unknownFields.getDescription(indent)
       return output
     }
     override public var hashValue:Int {
         get {
             var hashCode:Int = 7
+            if hasId {
+               hashCode = (hashCode &* 31) &+ id.hashValue
+            }
             hashCode = (hashCode &* 31) &+  unknownFields.hashValue
             return hashCode
         }
@@ -1855,6 +1874,29 @@ public extension Myproto {
       required override public init () {
          super.init()
       }
+      public var hasId:Bool {
+           get {
+                return builderResult.hasId
+           }
+      }
+      public var id:Int64 {
+           get {
+                return builderResult.id
+           }
+           set (value) {
+               builderResult.hasId = true
+               builderResult.id = value
+           }
+      }
+      public func setId(value:Int64) -> Myproto.GetRoomsTos.Builder {
+        self.id = value
+        return self
+      }
+      public func clearId() -> Myproto.GetRoomsTos.Builder{
+           builderResult.hasId = false
+           builderResult.id = Int64(0)
+           return self
+      }
       override public var internalGetResult:GeneratedMessage {
            get {
               return builderResult
@@ -1879,6 +1921,9 @@ public extension Myproto {
         if other == Myproto.GetRoomsTos() {
          return self
         }
+        if other.hasId {
+             id = other.id
+        }
         try mergeUnknownFields(other.unknownFields)
         return self
       }
@@ -1893,6 +1938,9 @@ public extension Myproto {
           case 0: 
             self.unknownFields = try unknownFieldsBuilder.build()
             return self
+
+          case 8 :
+            id = try input.readInt64()
 
           default:
             if (!(try parseUnknownField(input,unknownFields:unknownFieldsBuilder, extensionRegistry:extensionRegistry, tag:protobufTag))) {

@@ -8,12 +8,14 @@
 
 import UIKit
 
-class RoomCell: UITableViewCell{
+class   RoomCell: UITableViewCell{
     
-    @IBOutlet weak var roomName: UILabel!
-    var  name:String?{
+    @IBOutlet weak var roomNameLabel: UILabel!
+    @IBOutlet weak var curRoomUserLabel: UILabel!
+    var  roomName:String?{
         didSet{
-            self.roomName.text = name
+            print("set cell room name \(self.roomName)")
+            self.roomNameLabel.text = self.roomName
         }
         
     }

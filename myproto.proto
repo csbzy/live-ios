@@ -1,45 +1,47 @@
+syntax="proto3";
+
 package myproto;
 
 
 
 message CreateRoomTos{//<1000>
-	 required string roomName = 1;
+	 string roomName = 1;
 }
 
 message CreateRoomToc{//<1001>
-	required int64 roomID = 1;
+	 int64 roomID = 1;
 }
 
 message JoinRoomTos {//<1002>
-	required int64 errCode =1;
-	required int64 roomID = 2;
+	 int64 errCode =1;
+	 int64 roomID = 2;
 }
 
 message JoinRoomToc{//<1003>
-	required int64 errCode = 1;
+	 int64 errCode = 1;
 }
 
 message LeaveRoomTos {//<1004>
 
 }
 message LeaveRoomToc{//<1005>
-	required int64 errCode = 1;
+	 int64 errCode = 1;
 }
 
 message LiveTos{//<1006>
-	required bytes data = 1;
+	 bytes data = 1;
 }
 message LiveToc{//<1007>
-	required int64 errCode = 1;
+	 int64 errCode = 1;
 }
 
 message GetRoomsTos{//<1008>
-       required int64 id = 1;
+	 int64 id =1;
 }
 
 message room{
-	required int64 roomID = 1;
-	required string roomName = 2;
+	 int64 roomID = 1;
+	 string roomName = 2;
 }
 message GetRoomToc{//<1009>
 	repeated room room =1;

@@ -1,5 +1,7 @@
 source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
 use_frameworks!
-
-pod 'ProtocolBuffers-Swift'
-pod 'Starscream', '~> 1.1.3'
+target "live" do
+	pod 'ProtocolBuffers-Swift'
+        pod 'SwiftWebSocket'
+end

@@ -7,34 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A8D15621D4DAA2A00D9C1DB /* VideoStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8D15611D4DAA2A00D9C1DB /* VideoStreamViewController.swift */; };
+		2A8D156C1D4DAB5300D9C1DB /* AVCamPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8D156B1D4DAB5300D9C1DB /* AVCamPreviewView.swift */; };
+		2AE2D2661D4C3BFD005907CB /* SingletonSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE2D2651D4C3BFD005907CB /* SingletonSocket.swift */; };
+		2AE2D27B1D4C4898005907CB /* SwiftWebSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE2D2751D4C4894005907CB /* SwiftWebSocket.framework */; };
 		436E76431D4AEECB007EE492 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E76421D4AEECB007EE492 /* AppDelegate.swift */; };
-		436E76451D4AEECB007EE492 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E76441D4AEECB007EE492 /* ViewController.swift */; };
+		436E76451D4AEECB007EE492 /* LiveRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E76441D4AEECB007EE492 /* LiveRoomViewController.swift */; };
 		436E76481D4AEECB007EE492 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 436E76461D4AEECB007EE492 /* Main.storyboard */; };
 		436E764A1D4AEECB007EE492 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 436E76491D4AEECB007EE492 /* Assets.xcassets */; };
 		436E764D1D4AEECB007EE492 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 436E764B1D4AEECB007EE492 /* LaunchScreen.storyboard */; };
 		436E76551D4AF19B007EE492 /* Myproto.Myproto.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E76541D4AF19B007EE492 /* Myproto.Myproto.proto.swift */; };
 		436E766E1D4AF3F4007EE492 /* ProtocolBuffers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436E76611D4AF3B6007EE492 /* ProtocolBuffers.framework */; };
 		436E767D1D4B06BD007EE492 /* RoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E767C1D4B06BD007EE492 /* RoomCell.swift */; };
-		436E76921D4B09CA007EE492 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436E768A1D4B09B3007EE492 /* Starscream.framework */; };
 		436E76941D4B09E1007EE492 /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E76931D4B09E1007EE492 /* config.swift */; };
-		436E769A1D4B0A7E007EE492 /* Net.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E76991D4B0A7E007EE492 /* Net.swift */; };
-		FB69316ED2C661155226FB1C /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB894BFA32A815280C042D9 /* Pods.framework */; };
+		86AFE22DD02ED7B7D63215F6 /* Pods_live.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B0DFE622FC880814B3F68C8 /* Pods_live.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2AA6033D1D4B7EB70015385F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 436E767F1D4B09B3007EE492 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 48DD9114843181A521A33DC00E2A6F40;
+			remoteInfo = "Pods-live";
+		};
+		2AE2D2741D4C4894005907CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 436E767F1D4B09B3007EE492 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BA841B2B7A9EA2E898C6FE91754A64C2;
+			remoteInfo = SwiftWebSocket;
+		};
 		436E76601D4AF3B6007EE492 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 436E76561D4AF3B6007EE492 /* ProtocolBuffers.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 3F85569919C71BCF003802F2;
 			remoteInfo = ProtocolBuffers;
-		};
-		436E76621D4AF3B6007EE492 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 436E76561D4AF3B6007EE492 /* ProtocolBuffers.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 3FA7DAC71BE68F600067108E;
-			remoteInfo = "ProtocolBuffers(tvOS)";
 		};
 		436E76641D4AF3B6007EE492 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -64,20 +73,6 @@
 			remoteGlobalIDString = 3F4106261A1A667800742090;
 			remoteInfo = "UnitTesting(OSX)";
 		};
-		436E766C1D4AF3B6007EE492 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 436E76561D4AF3B6007EE492 /* ProtocolBuffers.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 3FA7DAD01BE68F600067108E;
-			remoteInfo = "UnitTesting(tvOS)";
-		};
-		436E76851D4B09B3007EE492 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 436E767F1D4B09B3007EE492 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 6F6BCF089D797BE444DFCEDFCD5A1E9E;
-			remoteInfo = Pods;
-		};
 		436E76871D4B09B3007EE492 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 436E767F1D4B09B3007EE492 /* Pods.xcodeproj */;
@@ -85,19 +80,16 @@
 			remoteGlobalIDString = 95C01318193B83110448FFC7BCE00D44;
 			remoteInfo = "ProtocolBuffers-Swift";
 		};
-		436E76891D4B09B3007EE492 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 436E767F1D4B09B3007EE492 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 39CCABBDDC466E8E93A348183342927C;
-			remoteInfo = Starscream;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1738D476B5BB2799F400E834 /* Pods-live.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-live.debug.xcconfig"; path = "Pods/Target Support Files/Pods-live/Pods-live.debug.xcconfig"; sourceTree = "<group>"; };
+		2A8D15611D4DAA2A00D9C1DB /* VideoStreamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoStreamViewController.swift; sourceTree = "<group>"; };
+		2A8D156B1D4DAB5300D9C1DB /* AVCamPreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVCamPreviewView.swift; sourceTree = "<group>"; };
+		2AE2D2651D4C3BFD005907CB /* SingletonSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingletonSocket.swift; sourceTree = "<group>"; };
 		436E763F1D4AEECB007EE492 /* live.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = live.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		436E76421D4AEECB007EE492 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		436E76441D4AEECB007EE492 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		436E76441D4AEECB007EE492 /* LiveRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveRoomViewController.swift; sourceTree = "<group>"; };
 		436E76471D4AEECB007EE492 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		436E76491D4AEECB007EE492 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		436E764C1D4AEECB007EE492 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -107,10 +99,9 @@
 		436E767C1D4B06BD007EE492 /* RoomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomCell.swift; sourceTree = "<group>"; };
 		436E767F1D4B09B3007EE492 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 		436E76931D4B09E1007EE492 /* config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
-		436E76991D4B0A7E007EE492 /* Net.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Net.swift; sourceTree = "<group>"; };
+		8B0DFE622FC880814B3F68C8 /* Pods_live.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_live.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AB894BFA32A815280C042D9 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9B311F97193FAF2633715CC4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		E8883E00FF7C3D6FC60BC66A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		F433182919C3FDE3C405FD27 /* Pods-live.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-live.release.xcconfig"; path = "Pods/Target Support Files/Pods-live/Pods-live.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,24 +109,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				436E76921D4B09CA007EE492 /* Starscream.framework in Frameworks */,
+				2AE2D27B1D4C4898005907CB /* SwiftWebSocket.framework in Frameworks */,
 				436E766E1D4AF3F4007EE492 /* ProtocolBuffers.framework in Frameworks */,
-				FB69316ED2C661155226FB1C /* Pods.framework in Frameworks */,
+				86AFE22DD02ED7B7D63215F6 /* Pods_live.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		127633879431911E2C56BC28 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				9B311F97193FAF2633715CC4 /* Pods.debug.xcconfig */,
-				E8883E00FF7C3D6FC60BC66A /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		436E76361D4AEECB007EE492 = {
 			isa = PBXGroup;
 			children = (
@@ -143,8 +125,8 @@
 				436E76561D4AF3B6007EE492 /* ProtocolBuffers.xcodeproj */,
 				436E76411D4AEECB007EE492 /* live */,
 				436E76401D4AEECB007EE492 /* Products */,
-				127633879431911E2C56BC28 /* Pods */,
 				962E198A422AA13893739B67 /* Frameworks */,
+				623D6A292E0D81D764724524 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -161,14 +143,16 @@
 			children = (
 				436E767C1D4B06BD007EE492 /* RoomCell.swift */,
 				436E76421D4AEECB007EE492 /* AppDelegate.swift */,
-				436E76441D4AEECB007EE492 /* ViewController.swift */,
+				436E76441D4AEECB007EE492 /* LiveRoomViewController.swift */,
 				436E76461D4AEECB007EE492 /* Main.storyboard */,
+				2A8D156B1D4DAB5300D9C1DB /* AVCamPreviewView.swift */,
+				2A8D15611D4DAA2A00D9C1DB /* VideoStreamViewController.swift */,
 				436E76541D4AF19B007EE492 /* Myproto.Myproto.proto.swift */,
 				436E76491D4AEECB007EE492 /* Assets.xcassets */,
 				436E764B1D4AEECB007EE492 /* LaunchScreen.storyboard */,
 				436E764E1D4AEECB007EE492 /* Info.plist */,
 				436E76931D4B09E1007EE492 /* config.swift */,
-				436E76991D4B0A7E007EE492 /* Net.swift */,
+				2AE2D2651D4C3BFD005907CB /* SingletonSocket.swift */,
 			);
 			path = live;
 			sourceTree = "<group>";
@@ -177,12 +161,10 @@
 			isa = PBXGroup;
 			children = (
 				436E76611D4AF3B6007EE492 /* ProtocolBuffers.framework */,
-				436E76631D4AF3B6007EE492 /* ProtocolBuffers.framework */,
-				436E76651D4AF3B6007EE492 /* ProtocolBuffers.framework */,
-				436E76671D4AF3B6007EE492 /* ProtocolBuffers.framework */,
 				436E76691D4AF3B6007EE492 /* ProtocolBuffersTests.xctest */,
+				436E76651D4AF3B6007EE492 /* ProtocolBuffers.framework */,
 				436E766B1D4AF3B6007EE492 /* UnitTesting(OSX).xctest */,
-				436E766D1D4AF3B6007EE492 /* UnitTesting(tvOS).xctest */,
+				436E76671D4AF3B6007EE492 /* ProtocolBuffers.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -190,17 +172,27 @@
 		436E76801D4B09B3007EE492 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				436E76861D4B09B3007EE492 /* Pods.framework */,
+				2AA6033E1D4B7EB70015385F /* Pods_live.framework */,
 				436E76881D4B09B3007EE492 /* ProtocolBuffers.framework */,
-				436E768A1D4B09B3007EE492 /* Starscream.framework */,
+				2AE2D2751D4C4894005907CB /* SwiftWebSocket.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		623D6A292E0D81D764724524 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1738D476B5BB2799F400E834 /* Pods-live.debug.xcconfig */,
+				F433182919C3FDE3C405FD27 /* Pods-live.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		962E198A422AA13893739B67 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				9AB894BFA32A815280C042D9 /* Pods.framework */,
+				8B0DFE622FC880814B3F68C8 /* Pods_live.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -212,12 +204,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 436E76511D4AEECB007EE492 /* Build configuration list for PBXNativeTarget "live" */;
 			buildPhases = (
-				4D52C8A2B71B1D868707ECB8 /* Check Pods Manifest.lock */,
+				8F610F028AAE5AB0E6B9A174 /* [CP] Check Pods Manifest.lock */,
 				436E763B1D4AEECB007EE492 /* Sources */,
 				436E763C1D4AEECB007EE492 /* Frameworks */,
 				436E763D1D4AEECB007EE492 /* Resources */,
-				E188307E4CC0D03428209A43 /* Embed Pods Frameworks */,
-				95AD27136462E05645F50A39 /* Copy Pods Resources */,
+				1C53D44DBFB8FBF68E6BE587 /* [CP] Embed Pods Frameworks */,
+				B11B1532D67EC10FEEB8E991 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -272,18 +264,25 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		2AA6033E1D4B7EB70015385F /* Pods_live.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods_live.framework;
+			remoteRef = 2AA6033D1D4B7EB70015385F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2AE2D2751D4C4894005907CB /* SwiftWebSocket.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftWebSocket.framework;
+			remoteRef = 2AE2D2741D4C4894005907CB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		436E76611D4AF3B6007EE492 /* ProtocolBuffers.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = ProtocolBuffers.framework;
 			remoteRef = 436E76601D4AF3B6007EE492 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		436E76631D4AF3B6007EE492 /* ProtocolBuffers.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = ProtocolBuffers.framework;
-			remoteRef = 436E76621D4AF3B6007EE492 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		436E76651D4AF3B6007EE492 /* ProtocolBuffers.framework */ = {
@@ -314,32 +313,11 @@
 			remoteRef = 436E766A1D4AF3B6007EE492 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		436E766D1D4AF3B6007EE492 /* UnitTesting(tvOS).xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "UnitTesting(tvOS).xctest";
-			remoteRef = 436E766C1D4AF3B6007EE492 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		436E76861D4B09B3007EE492 /* Pods.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Pods.framework;
-			remoteRef = 436E76851D4B09B3007EE492 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		436E76881D4B09B3007EE492 /* ProtocolBuffers.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = ProtocolBuffers.framework;
 			remoteRef = 436E76871D4B09B3007EE492 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		436E768A1D4B09B3007EE492 /* Starscream.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Starscream.framework;
-			remoteRef = 436E76891D4B09B3007EE492 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -358,14 +336,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4D52C8A2B71B1D868707ECB8 /* Check Pods Manifest.lock */ = {
+		1C53D44DBFB8FBF68E6BE587 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-live/Pods-live-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F610F028AAE5AB0E6B9A174 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,34 +366,19 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		95AD27136462E05645F50A39 /* Copy Pods Resources */ = {
+		B11B1532D67EC10FEEB8E991 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E188307E4CC0D03428209A43 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-live/Pods-live-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -410,11 +388,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				436E76451D4AEECB007EE492 /* ViewController.swift in Sources */,
-				436E769A1D4B0A7E007EE492 /* Net.swift in Sources */,
+				436E76451D4AEECB007EE492 /* LiveRoomViewController.swift in Sources */,
 				436E76431D4AEECB007EE492 /* AppDelegate.swift in Sources */,
 				436E767D1D4B06BD007EE492 /* RoomCell.swift in Sources */,
+				2A8D15621D4DAA2A00D9C1DB /* VideoStreamViewController.swift in Sources */,
 				436E76941D4B09E1007EE492 /* config.swift in Sources */,
+				2AE2D2661D4C3BFD005907CB /* SingletonSocket.swift in Sources */,
+				2A8D156C1D4DAB5300D9C1DB /* AVCamPreviewView.swift in Sources */,
 				436E76551D4AF19B007EE492 /* Myproto.Myproto.proto.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -524,10 +504,11 @@
 		};
 		436E76521D4AEECB007EE492 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9B311F97193FAF2633715CC4 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 1738D476B5BB2799F400E834 /* Pods-live.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = live/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = chensb.live;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -536,10 +517,11 @@
 		};
 		436E76531D4AEECB007EE492 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E8883E00FF7C3D6FC60BC66A /* Pods.release.xcconfig */;
+			baseConfigurationReference = F433182919C3FDE3C405FD27 /* Pods-live.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = live/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = chensb.live;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -126,6 +126,50 @@ class SingletonSocket {
         }
     }
     
+    func pushStream(type: Int64, data : NSData,competion:()->()){
+        let liveStream = Myproto.LiveTos.Builder()
+        do {
+            self.ws.open()
+            liveStream.setData(data)
+            liveStream.setTypes(type)
+            let liveStreamData =  try liveStream.build()
+            let  protoData = liveStreamData.data()
+            let data = NSMutableData()
+            var len :UInt64 =  CFSwapInt64HostToBig(UInt64(sizeof(Int64) * 2 + protoData.length))
+            data.appendBytes(&len, length: sizeof(Int64))
+            var messageType = CFSwapInt64HostToBig(1006)
+            data.appendBytes(&messageType, length: sizeof(Int64))
+            
+            data.appendBytes(protoData.bytes, length: protoData.length)
+            print1(data)
+            self.ws.send(data)
+            self.ws.event.message = { message in
+                do {
+                    var m = message as! [UInt8]
+                    let len = m.count
+                    print(m)
+                    let start = sizeof(UInt64) * 2
+                    if start >= len {
+                        print(start,len)
+                        throw(MyErrorEnum.NODATA)
+                    }
+                    let m1 = Array(m[start...len-1])
+                    
+                    let data = NSData(bytes: m1 as [UInt8]   , length: m1.count * sizeof(UInt8))
+                    print(try Myproto.LiveToc.parseFromData( data))
+                    competion()
+                }catch {
+                    print(error)
+                }
+                
+            }
+            
+            
+        }catch _ {
+            print("build err")
+            
+        }
+    }
     
     func print1(nsData : NSData){
         

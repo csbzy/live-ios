@@ -1,3 +1,4 @@
+
 syntax="proto3";
 
 package myproto;
@@ -29,7 +30,8 @@ message LeaveRoomToc{//<1005>
 }
 
 message LiveTos{//<1006>
-	 bytes data = 1;
+         int64 type = 1;
+	 bytes data = 2;
 }
 message LiveToc{//<1007>
 	 int64 errCode = 1;

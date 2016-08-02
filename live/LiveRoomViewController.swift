@@ -51,8 +51,12 @@ class LiveRoomViewController: UIViewController,UITableViewDelegate, UITableViewD
     
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let indexPath = self.roomTableView.indexPathForSelectedRow!;
-        let videoViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("VideoStreamViewController") as! VideoStreamViewController
+        if isRunningOniOSDevice(){
+             let videoViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("PushViewController") as! PushViewController
+        }else{
+            let 
+        }
+       
         
         self.presentViewController(videoViewController, animated: true) { () -> Void in
         }

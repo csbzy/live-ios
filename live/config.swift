@@ -10,4 +10,14 @@ import Foundation
 
 //let WS = "ws://127.0.0.1:8080/ws"
 
-let WS = "ws://192.168.1.113:8080/ws"
+let WS = "ws://192.168.1.112:8080/ws"
+
+
+func isRunningOniOSDevice() -> Bool {
+    
+    #if (arch(arm) && os(iOS)) || (arch(arm64) && os(iOS))
+        return true
+    #else
+        return false
+    #endif
+}

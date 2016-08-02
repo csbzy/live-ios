@@ -32,6 +32,8 @@ class VideoStreamViewController: UIViewController, AVCaptureFileOutputRecordingD
     var movieFileOutput: AVCaptureMovieFileOutput?
     var stillImageOutput: AVCaptureStillImageOutput?
     
+    
+    
     var deviceAuthorized: Bool  = false
     var backgroundRecordId: UIBackgroundTaskIdentifier = UIBackgroundTaskInvalid
     var sessionRunningAndDeviceAuthorized: Bool {

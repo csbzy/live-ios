@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import XCGLogger
 //let WS = "ws://127.0.0.1:8080/ws"
 
 let WS = "ws://192.168.1.112:8080/ws"
@@ -21,3 +21,10 @@ func isRunningOniOSDevice() -> Bool {
         return false
     #endif
 }
+
+let log = XCGLogger.defaultInstance()
+
+enum StreamType :UInt8{
+    case VOICE = 1,VIDEO = 2
+}
+

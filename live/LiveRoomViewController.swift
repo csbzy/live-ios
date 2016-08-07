@@ -28,7 +28,7 @@ class LiveRoomViewController: UIViewController,UITableViewDelegate, UITableViewD
    
         self.roomTableView.estimatedRowHeight = self.roomTableView.rowHeight
         self.roomTableView.rowHeight = UITableViewAutomaticDimension
-        SingletonSocket.sharedInstance.viewController = self
+        ProtoHandler.sharedInstance.liveViewController = self
         SingletonSocket.sharedInstance.getRoom()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -51,19 +51,20 @@ class LiveRoomViewController: UIViewController,UITableViewDelegate, UITableViewD
     
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if isRunningOniOSDevice(){
-             let videoViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("PushViewController") as! PushViewController
-        }else{
-            let 
+        let room  = rooms![indexPath.row]
+   /*     if isRunningOniOSDevice(){
+            let videoViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("PushViewController") as! PushViewController
+            self.presentViewController(videoViewController, animated: true) { () -> Void in
+            }
+        }else{*/
+            let watchVideoViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("WatchStreamViewController") as! WatchStreamViewController
+            watchVideoViewController.roomID = room.roomId
+            self.presentViewController(watchVideoViewController, animated: true) { () -> Void in
+            }
         }
-       
+
         
-        self.presentViewController(videoViewController, animated: true) { () -> Void in
-        }
-        
-        
-        
-    }
+    //}
      func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1

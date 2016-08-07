@@ -8,20 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		2A277B321D4F8EDF001C168A /* PushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A277B311D4F8EDF001C168A /* PushViewController.swift */; };
+		2A53A6731D5365ED00CCAAC3 /* WebsocketLiveStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A53A6721D5365ED00CCAAC3 /* WebsocketLiveStream.swift */; };
+		2A53A6791D53676C00CCAAC3 /* XCGLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9DCD231D52179A009B9486 /* XCGLogger.framework */; };
 		2A8D15621D4DAA2A00D9C1DB /* VideoStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8D15611D4DAA2A00D9C1DB /* VideoStreamViewController.swift */; };
 		2A8D156C1D4DAB5300D9C1DB /* AVCamPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8D156B1D4DAB5300D9C1DB /* AVCamPreviewView.swift */; };
-		2A93D8511D506C1B0058E0A8 /* AudioEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A93D84E1D506C1B0058E0A8 /* AudioEncoder.swift */; };
-		2A93D8521D506C1B0058E0A8 /* AVEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A93D84F1D506C1B0058E0A8 /* AVEncoder.swift */; };
-		2A93D8531D506C1B0058E0A8 /* VideoEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A93D8501D506C1B0058E0A8 /* VideoEncoder.swift */; };
-		2A93D8581D506C330058E0A8 /* AudioCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A93D8551D506C330058E0A8 /* AudioCapture.swift */; };
-		2A93D8591D506C330058E0A8 /* AVCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A93D8561D506C330058E0A8 /* AVCapture.swift */; };
-		2A93D85A1D506C330058E0A8 /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A93D8571D506C330058E0A8 /* VideoCapture.swift */; };
-		2A93D85C1D506C400058E0A8 /* UtilityTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A93D85B1D506C400058E0A8 /* UtilityTool.swift */; };
+		2A9DCD2C1D5218B3009B9486 /* lf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9DCD2B1D5218B3009B9486 /* lf.framework */; };
 		2A9EC9631D507A2700A01BB7 /* Myproto.Myproto.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9EC9621D507A2700A01BB7 /* Myproto.Myproto.proto.swift */; };
 		2A9EC9641D507ADA00A01BB7 /* ProtocolBuffers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436E76881D4B09B3007EE492 /* ProtocolBuffers.framework */; };
 		2A9EC9741D50AE1C00A01BB7 /* WatchStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9EC9731D50AE1C00A01BB7 /* WatchStreamViewController.swift */; };
 		2AE2D2661D4C3BFD005907CB /* SingletonSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE2D2651D4C3BFD005907CB /* SingletonSocket.swift */; };
 		2AE2D27B1D4C4898005907CB /* SwiftWebSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE2D2751D4C4894005907CB /* SwiftWebSocket.framework */; };
+		2AFECA7B1D54C2CB00C9B064 /* ProtoHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFECA7A1D54C2CB00C9B064 /* ProtoHandler.swift */; };
 		436E76431D4AEECB007EE492 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E76421D4AEECB007EE492 /* AppDelegate.swift */; };
 		436E76451D4AEECB007EE492 /* LiveRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E76441D4AEECB007EE492 /* LiveRoomViewController.swift */; };
 		436E76481D4AEECB007EE492 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 436E76461D4AEECB007EE492 /* Main.storyboard */; };
@@ -33,6 +30,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2A9DCD221D52179A009B9486 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 436E767F1D4B09B3007EE492 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7FE98094FA6F5224F90F9F150CC8201A;
+			remoteInfo = XCGLogger;
+		};
+		2A9DCD2A1D5218B3009B9486 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 436E767F1D4B09B3007EE492 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9FC5DC7E22F442810778295AFBE33646;
+			remoteInfo = lf;
+		};
 		2AA6033D1D4B7EB70015385F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 436E767F1D4B09B3007EE492 /* Pods.xcodeproj */;
@@ -59,19 +70,13 @@
 /* Begin PBXFileReference section */
 		1738D476B5BB2799F400E834 /* Pods-live.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-live.debug.xcconfig"; path = "Pods/Target Support Files/Pods-live/Pods-live.debug.xcconfig"; sourceTree = "<group>"; };
 		2A277B311D4F8EDF001C168A /* PushViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushViewController.swift; sourceTree = "<group>"; };
+		2A53A6721D5365ED00CCAAC3 /* WebsocketLiveStream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebsocketLiveStream.swift; sourceTree = "<group>"; };
 		2A8D15611D4DAA2A00D9C1DB /* VideoStreamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoStreamViewController.swift; sourceTree = "<group>"; };
 		2A8D156B1D4DAB5300D9C1DB /* AVCamPreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVCamPreviewView.swift; sourceTree = "<group>"; };
-		2A93D84E1D506C1B0058E0A8 /* AudioEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioEncoder.swift; path = Encode/AudioEncoder.swift; sourceTree = "<group>"; };
-		2A93D84F1D506C1B0058E0A8 /* AVEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AVEncoder.swift; path = Encode/AVEncoder.swift; sourceTree = "<group>"; };
-		2A93D8501D506C1B0058E0A8 /* VideoEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideoEncoder.swift; path = Encode/VideoEncoder.swift; sourceTree = "<group>"; };
-		2A93D8551D506C330058E0A8 /* AudioCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioCapture.swift; path = Capture/AudioCapture.swift; sourceTree = "<group>"; };
-		2A93D8561D506C330058E0A8 /* AVCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AVCapture.swift; path = Capture/AVCapture.swift; sourceTree = "<group>"; };
-		2A93D8571D506C330058E0A8 /* VideoCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideoCapture.swift; path = Capture/VideoCapture.swift; sourceTree = "<group>"; };
-		2A93D85B1D506C400058E0A8 /* UtilityTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UtilityTool.swift; path = UtilityTool/UtilityTool.swift; sourceTree = "<group>"; };
 		2A9EC9621D507A2700A01BB7 /* Myproto.Myproto.proto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Myproto.Myproto.proto.swift; sourceTree = SOURCE_ROOT; };
-		2A9EC9691D50ACC600A01BB7 /* live-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "live-Bridging-Header.h"; sourceTree = "<group>"; };
 		2A9EC9731D50AE1C00A01BB7 /* WatchStreamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchStreamViewController.swift; sourceTree = "<group>"; };
 		2AE2D2651D4C3BFD005907CB /* SingletonSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingletonSocket.swift; sourceTree = "<group>"; };
+		2AFECA7A1D54C2CB00C9B064 /* ProtoHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtoHandler.swift; sourceTree = "<group>"; };
 		436E763F1D4AEECB007EE492 /* live.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = live.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		436E76421D4AEECB007EE492 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		436E76441D4AEECB007EE492 /* LiveRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveRoomViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +97,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A53A6791D53676C00CCAAC3 /* XCGLogger.framework in Frameworks */,
+				2A9DCD2C1D5218B3009B9486 /* lf.framework in Frameworks */,
 				2A9EC9641D507ADA00A01BB7 /* ProtocolBuffers.framework in Frameworks */,
 				2AE2D27B1D4C4898005907CB /* SwiftWebSocket.framework in Frameworks */,
 				86AFE22DD02ED7B7D63215F6 /* Pods_live.framework in Frameworks */,
@@ -101,26 +108,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2A93D84D1D506C040058E0A8 /* Encode */ = {
-			isa = PBXGroup;
-			children = (
-				2A93D84E1D506C1B0058E0A8 /* AudioEncoder.swift */,
-				2A93D84F1D506C1B0058E0A8 /* AVEncoder.swift */,
-				2A93D8501D506C1B0058E0A8 /* VideoEncoder.swift */,
-			);
-			name = Encode;
-			sourceTree = "<group>";
-		};
-		2A93D8541D506C250058E0A8 /* Capture */ = {
-			isa = PBXGroup;
-			children = (
-				2A93D8551D506C330058E0A8 /* AudioCapture.swift */,
-				2A93D8561D506C330058E0A8 /* AVCapture.swift */,
-				2A93D8571D506C330058E0A8 /* VideoCapture.swift */,
-			);
-			name = Capture;
-			sourceTree = "<group>";
-		};
 		436E76361D4AEECB007EE492 = {
 			isa = PBXGroup;
 			children = (
@@ -144,9 +131,6 @@
 			isa = PBXGroup;
 			children = (
 				2A9EC9621D507A2700A01BB7 /* Myproto.Myproto.proto.swift */,
-				2A93D85B1D506C400058E0A8 /* UtilityTool.swift */,
-				2A93D8541D506C250058E0A8 /* Capture */,
-				2A93D84D1D506C040058E0A8 /* Encode */,
 				436E767C1D4B06BD007EE492 /* RoomCell.swift */,
 				436E76421D4AEECB007EE492 /* AppDelegate.swift */,
 				436E76441D4AEECB007EE492 /* LiveRoomViewController.swift */,
@@ -160,7 +144,8 @@
 				436E764E1D4AEECB007EE492 /* Info.plist */,
 				436E76931D4B09E1007EE492 /* config.swift */,
 				2AE2D2651D4C3BFD005907CB /* SingletonSocket.swift */,
-				2A9EC9691D50ACC600A01BB7 /* live-Bridging-Header.h */,
+				2A53A6721D5365ED00CCAAC3 /* WebsocketLiveStream.swift */,
+				2AFECA7A1D54C2CB00C9B064 /* ProtoHandler.swift */,
 			);
 			path = live;
 			sourceTree = "<group>";
@@ -168,9 +153,11 @@
 		436E76801D4B09B3007EE492 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				2A9DCD2B1D5218B3009B9486 /* lf.framework */,
 				2AA6033E1D4B7EB70015385F /* Pods_live.framework */,
 				436E76881D4B09B3007EE492 /* ProtocolBuffers.framework */,
 				2AE2D2751D4C4894005907CB /* SwiftWebSocket.framework */,
+				2A9DCD231D52179A009B9486 /* XCGLogger.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -257,6 +244,20 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		2A9DCD231D52179A009B9486 /* XCGLogger.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = XCGLogger.framework;
+			remoteRef = 2A9DCD221D52179A009B9486 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2A9DCD2B1D5218B3009B9486 /* lf.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = lf.framework;
+			remoteRef = 2A9DCD2A1D5218B3009B9486 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		2AA6033E1D4B7EB70015385F /* Pods_live.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -347,22 +348,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				436E76451D4AEECB007EE492 /* LiveRoomViewController.swift in Sources */,
-				2A93D85A1D506C330058E0A8 /* VideoCapture.swift in Sources */,
-				2A93D8591D506C330058E0A8 /* AVCapture.swift in Sources */,
-				2A93D8521D506C1B0058E0A8 /* AVEncoder.swift in Sources */,
 				2A9EC9741D50AE1C00A01BB7 /* WatchStreamViewController.swift in Sources */,
 				436E76431D4AEECB007EE492 /* AppDelegate.swift in Sources */,
 				436E767D1D4B06BD007EE492 /* RoomCell.swift in Sources */,
-				2A93D8531D506C1B0058E0A8 /* VideoEncoder.swift in Sources */,
 				2A8D15621D4DAA2A00D9C1DB /* VideoStreamViewController.swift in Sources */,
 				436E76941D4B09E1007EE492 /* config.swift in Sources */,
+				2A53A6731D5365ED00CCAAC3 /* WebsocketLiveStream.swift in Sources */,
+				2AFECA7B1D54C2CB00C9B064 /* ProtoHandler.swift in Sources */,
 				2A277B321D4F8EDF001C168A /* PushViewController.swift in Sources */,
 				2A9EC9631D507A2700A01BB7 /* Myproto.Myproto.proto.swift in Sources */,
 				2AE2D2661D4C3BFD005907CB /* SingletonSocket.swift in Sources */,
-				2A93D8581D506C330058E0A8 /* AudioCapture.swift in Sources */,
 				2A8D156C1D4DAB5300D9C1DB /* AVCamPreviewView.swift in Sources */,
-				2A93D85C1D506C400058E0A8 /* UtilityTool.swift in Sources */,
-				2A93D8511D506C1B0058E0A8 /* AudioEncoder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,8 +476,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = chensb.live;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "live/live-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -496,7 +493,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = chensb.live;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "live/live-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

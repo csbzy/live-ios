@@ -1,15 +1,30 @@
 PODS:
+  - lf (0.3.4):
+    - XCGLogger (~> 3.3)
   - ProtocolBuffers-Swift (2.4.3)
   - SwiftWebSocket (2.6.2)
+  - XCGLogger (3.3)
 
 DEPENDENCIES:
+  - lf (from `https://github.com/shogo4405/lf.swift.git`)
   - ProtocolBuffers-Swift
   - SwiftWebSocket
 
+EXTERNAL SOURCES:
+  lf:
+    :git: https://github.com/shogo4405/lf.swift.git
+
+CHECKOUT OPTIONS:
+  lf:
+    :commit: 810f4620c513bb8ef99b02596e5561d9a3675bab
+    :git: https://github.com/shogo4405/lf.swift.git
+
 SPEC CHECKSUMS:
+  lf: 80cd4a177466167efb83054f1e784316c3dc0051
   ProtocolBuffers-Swift: afbdde78be3c6af8a610d2c257d6bc88e8c7c5d4
   SwiftWebSocket: 2bb9dda75c87f64eaf9768131141857ca8611aac
+  XCGLogger: d6e196e78940ff6daab17d6917107876f973fa31
 
-PODFILE CHECKSUM: c76b70e4cb0e5ffb3a2d28e2d57678c19cb6c27b
+PODFILE CHECKSUM: e83224265e59cb958226bda9a1a23589b295884f
 
 COCOAPODS: 1.0.1

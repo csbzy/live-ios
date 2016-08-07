@@ -178,7 +178,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HY1-BO-Zxf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1786" y="-256"/>
+            <point key="canvasLocation" x="1996" y="-377"/>
         </scene>
         <!--Video Stream View Controller-->
         <scene sceneID="sK7-EN-sZ7">
@@ -242,25 +242,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KeP-5Y-qs7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="979" y="-190"/>
+            <point key="canvasLocation" x="342" y="-390"/>
         </scene>
         <!--Watch Stream View Controller-->
-        <scene sceneID="4y5-gu-UmC">
+        <scene sceneID="hUh-ps-dP1">
             <objects>
-                <viewController id="Hbo-OB-or2" customClass="WatchStreamViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WatchStreamViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WOw-i5-0Wc" customClass="WatchStreamViewController" customModule="live" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Ssv-01-5g2"/>
-                        <viewControllerLayoutGuide type="bottom" id="OT2-lm-isZ"/>
+                        <viewControllerLayoutGuide type="top" id="jjY-0y-uFY"/>
+                        <viewControllerLayoutGuide type="bottom" id="xkx-xn-xhB"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Iqp-cY-G4A" customClass="VideoView">
+                    <view key="view" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" id="mwO-dm-j7n">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9Hn-Wd-k3i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lgM-WW-6Nw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="917" y="467"/>
+            <point key="canvasLocation" x="1311" y="-370"/>
         </scene>
     </scenes>
 </document>

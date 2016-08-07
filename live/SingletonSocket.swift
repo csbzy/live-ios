@@ -7,13 +7,13 @@
 //
 
 import SwiftWebSocket
-
+import lf
 enum MyErrorEnum : ErrorType {
     case NODATA
 }
 class SingletonSocket {
     let ws = WebSocket(WS)
-    weak var viewController: LiveRoomViewController?
+
     init(){
         self.ws.event.close = {
             code, reason, clean in
@@ -27,6 +27,32 @@ class SingletonSocket {
         }
         self.ws.open()
         self.ws.ping()
+        
+                    self.ws.event.message = { message in
+                        do {
+                           var m = message as! [UInt8]
+                            let len = m.count
+                          
+                            
+                            let start = sizeof(UInt64) * 2
+                            if start >= len {
+                                print(start,len)
+                                throw(MyErrorEnum.NODATA)
+                            }
+                        
+//                            uin64(len),uint64(protoType),uint8(mediaType),mediaData....
+                            let typeByte = Array(Array(m[8...15]).reverse())
+                            let typeRaw = self.fromByteArray(typeByte, UInt64.self)
+                            let type = ProtoType(rawValue: typeRaw)
+                            let m1 = Array(m[start...len-1])
+                            let data = NSData(bytes: m1 as [UInt8]   , length: m1.count * sizeof(UInt8))
+                            ProtoHandler.sharedInstance.protoHandler(type!, data: data)
+
+                        }catch {
+                            print(error)
+                        }
+                        
+                    }
 
     }
     class var sharedInstance : SingletonSocket{
@@ -37,6 +63,17 @@ class SingletonSocket {
         return Static.instance
     }
 
+    func fromByteArray<T>(value: [UInt8], _: T.Type) -> T {
+        return value.withUnsafeBufferPointer {
+            return UnsafePointer<T>($0.baseAddress).memory
+        }
+    }
+    
+    func toByteArray<T>( var value: T) -> [UInt8] {
+        return withUnsafePointer(&value) {
+            Array(UnsafeBufferPointer(start: UnsafePointer<UInt8>($0), count: sizeof(T)))
+        }
+    }
     func getRoom(){
         let getRoomsBuilder = Myproto.GetRoomsTos.Builder()
         do {
@@ -53,29 +90,6 @@ class SingletonSocket {
             data.appendBytes(protoData.bytes, length: protoData.length)
             
             self.ws.send(data)
-
-            print("get room")
-            self.ws.event.message = { message in
-                do {
-                    var m = message as! [UInt8]
-                    let len = m.count
-                    print(m)
-                    let start = sizeof(UInt64) * 2
-                    if start >= len {
-                        print(start,len)
-                        throw(MyErrorEnum.NODATA)
-                    }
-                    let m1 = Array(m[start...len-1])
-                    
-                    let data = NSData(bytes: m1 as [UInt8]   , length: m1.count * sizeof(UInt8))
-                    let  rooms =  try Myproto.GetRoomToc.parseFromData( data)
-                    self.viewController!.rooms = rooms.room
-                }catch {
-                    print(error)
-                }
-                
-            }
-            
             
         }catch _ {
             print("build err")
@@ -98,79 +112,48 @@ class SingletonSocket {
             data.appendBytes(protoData.bytes, length: protoData.length)
             
             self.ws.send(data)
-            self.ws.event.message = { message in
-                do {
-                    var m = message as! [UInt8]
-                    let len = m.count
-                    print(m)
-                    let start = sizeof(UInt64) * 2
-                    if start >= len {
-                        print(start,len)
-                        throw(MyErrorEnum.NODATA)
-                    }
-                    let m1 = Array(m[start...len-1])
-                    
-                    let data = NSData(bytes: m1 as [UInt8]   , length: m1.count * sizeof(UInt8))
-                    print(try Myproto.CreateRoomToc.parseFromData( data))
-                    self.getRoom()
-                }catch {
-                    print(error)
-                }
-                
-            }
-            
             
         }catch _ {
             print("build err")
             
         }
     }
-    
-    func pushStream(type: Int64, data : NSData,competion:()->()){
-        let liveStream = Myproto.LiveTos.Builder()
+    func joinRoom(id: Int64) {
+        let joinRoomsBuilder = Myproto.JoinRoomTos.Builder()
         do {
             self.ws.open()
-            liveStream.setData(data)
-            liveStream.setTypes(type)
-            let liveStreamData =  try liveStream.build()
-            let  protoData = liveStreamData.data()
+            joinRoomsBuilder.setRoomId(id)
+            let joinRoom =  try joinRoomsBuilder.build()
+            let  protoData = joinRoom.data()
             let data = NSMutableData()
             var len :UInt64 =  CFSwapInt64HostToBig(UInt64(sizeof(Int64) * 2 + protoData.length))
             data.appendBytes(&len, length: sizeof(Int64))
-            var messageType = CFSwapInt64HostToBig(1006)
+            var messageType = CFSwapInt64HostToBig(1002)
             data.appendBytes(&messageType, length: sizeof(Int64))
             
             data.appendBytes(protoData.bytes, length: protoData.length)
-            print1(data)
+            
             self.ws.send(data)
-            self.ws.event.message = { message in
-                do {
-                    var m = message as! [UInt8]
-                    let len = m.count
-                    print(m)
-                    let start = sizeof(UInt64) * 2
-                    if start >= len {
-                        print(start,len)
-                        throw(MyErrorEnum.NODATA)
-                    }
-                    let m1 = Array(m[start...len-1])
-                    
-                    let data = NSData(bytes: m1 as [UInt8]   , length: m1.count * sizeof(UInt8))
-                    print(try Myproto.LiveToc.parseFromData( data))
-                    competion()
-                }catch {
-                    print(error)
-                }
-                
-            }
-            
-            
         }catch _ {
             print("build err")
             
         }
     }
-    
+    func pushStream(type: StreamType, data : NSData,competion:()->()){
+
+            let protoData = NSMutableData()
+        
+            var len  =  self.toByteArray(CFSwapInt64HostToBig(UInt64(sizeof(Int64) * 2 + sizeof(UInt8) + data.length)))
+        
+            protoData.appendBytes(&len, length: sizeof(Int64))
+            var liveType  =  Array(self.toByteArray(255 as UInt64).reverse())
+            protoData.appendBytes(&liveType, length: sizeof(UInt64))
+            var streamType = self.toByteArray(type.rawValue as UInt8 )
+            protoData.appendBytes(&streamType, length: sizeof(UInt8))
+           // log.info("protodata \(protoData)")
+            protoData.appendBytes(data.bytes, length: data.length)
+            self.ws.send(protoData)
+    }
     func print1(nsData : NSData){
         
         let buffer = UnsafeBufferPointer<UInt8>(start:UnsafePointer<UInt8>(nsData.bytes), count:nsData.length)
